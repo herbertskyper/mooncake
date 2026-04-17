@@ -24,7 +24,9 @@ class DummyClient : public PyClient {
                    const std::string &protocol, const std::string &rdma_devices,
                    const std::string &master_server_addr,
                    const std::shared_ptr<TransferEngine> &transfer_engine,
-                   const std::string &ipc_socket_path) {
+                   const std::string &ipc_socket_path,
+                   bool enable_ssd_offload = false,
+                   const std::string &ssd_offload_path = "") {
         // Dummy client does not support real setup
         return -1;
     };
